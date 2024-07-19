@@ -1,0 +1,45 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.register-container {
+    width: 33em;
+    max-height: 100%;
+    margin: 0; /* Elimina los márgenes predeterminados */
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 6em;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.container-fix-register {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.h1-register {
+    font-size: 3em;
+}
+
+
+.title-StayGo {
+    width: 35em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em ;
+    padding: 5%;
+    color: white;
+}
+

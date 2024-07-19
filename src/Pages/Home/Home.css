@@ -1,0 +1,198 @@
+/* Existing styles */
+html, body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.home-container {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3847C7;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav span {
+  margin: 0 10px;
+  cursor: pointer;
+  color: #4b4b4b;
+  transition: color 0.3s;
+}
+
+.nav span:hover {
+  color: #3847C7;
+}
+
+.profile-button {
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: #3847C7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between; /* Change this to space-between */
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.search-button, .search-main-button {
+  flex-grow: 1; /* Makes the buttons grow to fill available space */
+  padding: 10px 30px;
+  background-color: #f0f0f0;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  flex: 1; /* Ensure all buttons are the same width */
+}
+
+.search-button.active, .search-button:hover, .search-main-button:hover {
+  background-color: #3847C7;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f0f0f0;
+  min-width: 150px;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  outline: none;
+  display: none; /* Hide initially */
+}
+
+.search-input.active {
+  display: block; /* Show when active */
+}
+
+.hotel-cards {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 20px; /* Increase padding top */
+}
+
+.hotel-card {
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s;
+  width: 30%; /* Adjust to fit three cards horizontally */
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.hotel-card:hover {
+  transform: scale(1.05);
+}
+
+.hotel-image-container {
+  width: 100%;
+  height: 200px; /* Larger height for images */
+  overflow: hidden;
+  border-top-left-radius: 12px; /* Rounds the top left corner */
+  border-top-right-radius: 12px; /* Rounds the top right corner */
+}
+
+.hotel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0; /* Rounds the top corners */
+}
+
+.hotel-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.hotel-info h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+.rating {
+  color: #f39c12;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.location {
+  color: #7f8c8d;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .search-button, .search-main-button {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .hotel-card {
+    width: 45%; /* Adjust for two cards horizontally on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .hotel-card {
+    width: 100%; /* Adjust for one card per row on small screens */
+  }
+}

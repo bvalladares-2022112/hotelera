@@ -1,0 +1,269 @@
+/* AddEvents.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+.add-events-container {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.add-events-header {
+    background-color: white;
+    border-bottom: 2px solid #dddbdb;
+    text-align: left;
+    margin: 20px 2em;
+    font-family: 'Newsreader';
+}
+
+.add-events-header h1 {
+    font-size: 2em;
+    width: 98%;
+    margin: 0;
+}
+
+.add-events-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #004aad;
+}
+
+.add-events-nav span,
+.add-events-profile-button {
+    margin: 0 20px;
+    cursor: pointer;
+    color: #4b4b4b;
+    transition: color 0.3s;
+}
+
+.add-events-nav span.active,
+.add-events-nav span:hover {
+    color: #1a73e8;
+}
+
+.add-events-profile-button {
+    padding: 5px 10px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Contenedor principal para el formulario y eventos */
+.add-events-content {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex: 1;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Contenedor del formulario */
+.add-events-form-container {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    min-height: 875px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+.add-events-form-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.add-events-divider {
+    height: 2px;
+    background-color: #e7e7e7;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.add-events-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-events-form label {
+    font-size: 16px;
+    color: black;
+    font-family: 'Inter', sans-serif !important;
+    font-style: normal;
+}
+
+.add-events-form input {
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    font-family: 'Inter', sans-serif !important;
+    font-style: normal;
+}
+
+.add-events-button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.add-events-add-button,
+.add-events-cancel-button {
+    padding: 8px 100px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: normal;
+}
+
+.add-events-add-button {
+    background-color: black;
+}
+
+.cancel-button {
+    background-color: red;
+}
+
+/* Contenedor de los eventos */
+.add-events-events-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 875px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.add-events-events-container h2 {
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: normal;
+}
+
+.add-events-event-card {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+}
+
+.add-events-event-card h3 {
+    font-size: 30px;
+    color: black;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.add-events-event-card p {
+    font-size: 16px;
+    color: #000;
+    margin: 10px 0;
+}
+
+.add-events-event-card .add-events-event-label {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.add-events-event-card .add-events-event-detail {
+    color: #426b1f;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.edit-button {
+    padding: 1px 25px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .add-events-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .add-events-form-container,
+    .add-events-events-container {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .add-events-form-container h1 {
+        font-size: 28px;
+    }
+
+    .add-events-events-container h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-events-form-container,
+    .add-events-events-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .add-events-form-container h1 {
+        font-size: 24px;
+    }
+
+    .add-events-events-container h2 {
+        font-size: 20px;
+    }
+}
+
+.add-events-event-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.delete-button {
+  padding: 2px 50px;
+  color: white;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}

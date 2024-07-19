@@ -1,0 +1,291 @@
+/* Asegurando que el fondo de la página sea blanco */
+.room-container {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  /* Asegura que el contenedor ocupe al menos la altura total de la ventana */
+  padding: 0 20px;
+  /* Añadir padding para móviles */
+}
+
+/* Fondo blanco para el encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  /* Fondo blanco */
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a73e8;
+  /* Azul del logo */
+}
+
+.nav span {
+  margin: 0 10px;
+  cursor: pointer;
+  color: #4b4b4b;
+  transition: color 0.3s;
+}
+
+.nav span.active,
+.nav span:hover {
+  color: #1a73e8;
+  /* Azul al hacer clic o pasar el mouse */
+}
+
+.profile-button {
+  padding: 5px 10px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Fondo blanco para el contenido del hotel */
+.hotel-content {
+  padding: 20px;
+  justify-content: center;
+  background-color: white;
+  max-width: 90%;
+  /* Ancho máximo del contenido */
+  margin: 0 auto;
+  /* Centra el contenido horizontalmente */
+}
+
+.hotel-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: black;
+  /* Negro del título */
+}
+
+.hotel-card {
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  /* Añadir margen inferior */
+}
+
+.hotel-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  /* Aumentar la altura máxima de la imagen */
+  object-fit: cover;
+}
+
+.hotel-info {
+  text-align: left;
+  padding: 20px;
+}
+
+.hotel-name h2 {
+  font-size: 28px;
+  margin: 0;
+  color: #333;
+}
+
+.rating {
+  color: #f39c12;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.location {
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.hotel-details {
+  margin-bottom: 20px;
+}
+
+.detail {
+  margin-bottom: 10px;
+}
+
+.detail strong {
+  color: black;
+}
+
+.detail-description {
+  color: green;
+}
+
+.description strong {
+  color: black;
+}
+
+.description p {
+  line-height: 1.6;
+  color: green;
+}
+
+/* Estilos para Bedrooms y Events */
+.section-title {
+  font-size: 28px;
+  margin: 40px 0 20px;
+  color: black;
+}
+
+.bedrooms,
+.events {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  flex-wrap: wrap;
+  /* Permite que los elementos se ajusten en múltiples filas si es necesario */
+}
+
+.bedroom-card,
+.event-card {
+  border: 1px solid #e7e7e7;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+
+/* Tamaño y altura específica para cada tipo de tarjeta */
+.bedroom-card {
+  width: 350px;
+  height: 350px;
+}
+
+.event-card {
+  width: 350px;
+  height: 500px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+
+  .bedroom-card,
+  .event-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .bedroom-card,
+  .event-card {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .bedroom-card,
+  .event-card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Para un mejor diseño móvil */
+@media (max-width: 576px) {
+
+  .bedroom-card,
+  .event-card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+
+.bedroom-card:hover,
+.event-card:hover {
+  transform: scale(1.05);
+  /* Escalar el elemento al pasar el mouse */
+}
+
+.bedroom-card img,
+.event-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  /* Aumentar la altura máxima de la imagen */
+  object-fit: cover;
+}
+
+.bedroom-info {
+  padding: 25px;
+}
+
+.event-info {
+  padding: 25px;
+}
+
+.bedroom-info h3,
+.event-info h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.bedroom-info p,
+.event-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.event-info .detail-description {
+  color: green;
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 1024px) {
+  .hotel-content {
+    padding: 10px;
+  }
+
+  .bedroom-card,
+  .event-card {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .hotel-content h1 {
+    font-size: 28px;
+  }
+
+  .bedroom-card,
+  .event-card {
+    width: 100%;
+  }
+
+  .bedrooms,
+  .events {
+    gap: 0;
+  }
+
+  .profile-button {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}

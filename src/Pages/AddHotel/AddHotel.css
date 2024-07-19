@@ -1,0 +1,255 @@
+.add-hotel-container {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Fondo blanco para el encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #004aad;
+}
+
+.nav span,
+.profile-button {
+    margin: 0 20px;
+    cursor: pointer;
+    color: #4b4b4b;
+    transition: color 0.3s;
+}
+
+.nav span.active,
+.nav span:hover {
+    color: #1a73e8;
+}
+
+.profile-button {
+    padding: 5px 10px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Contenedor principal para el formulario y hoteles */
+.content {
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex: 1;
+    gap: 20px;
+    /* Añadir espacio entre contenedores */
+    flex-wrap: wrap;
+    /* Permitir que los elementos se ajusten en varias filas */
+}
+
+/* Contenedor del formulario */
+.form-container {
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    background-color: white;
+    width: 45%;
+    /* Ajusta el ancho del contenedor del formulario */
+    max-height: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-around
+}
+
+.form-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.divider {
+    height: 2px;
+    background-color: #e7e7e7;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.add-hotel-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-hotel-form label {
+    font-size: 16px;
+    color: black;
+    font-family: 'Inter', sans-serif !important;
+    font-style: normal;
+}
+
+.add-hotel-form input {
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    font-family: 'Inter', sans-serif !important;
+    font-style: normal;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.add-hotel-button,
+.cancel-button {
+    padding: 8px 100px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: normal;
+}
+
+.add-hotel-button {
+    background-color: black;
+}
+
+.cancel-button {
+    background-color: red;
+}
+
+/* Contenedor de los hoteles */
+.hotels-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 875px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.hotels-container h2 {
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: normal;
+}
+
+.hotel-card {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+}
+
+.hotel-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    /* Aumentar la altura máxima de la imagen */
+    object-fit: cover;
+}
+
+.hotel-card h3 {
+    font-size: 30px;
+    color: black;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hotel-card p {
+    font-size: 16px;
+    color: #000;
+    margin: 10px 0;
+}
+
+.hotel-card .hotel-label {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.hotel-card .hotel-detail {
+    color: #426b1f;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.edit-button,
+.delete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-button {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form-container,
+    .hotel-container {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .form-container h1 {
+        font-size: 28px;
+    }
+
+    .hotel-container h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .form-container,
+    .hotel-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-container h1 {
+        font-size: 24px;
+    }
+
+    .hotel-container h2 {
+        font-size: 20px;
+    }
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+}

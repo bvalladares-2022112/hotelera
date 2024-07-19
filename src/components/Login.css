@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    background-image: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75)), url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #6699;
+    margin: 0;
+}
+
+.login-container  {
+    width: 32em;
+    margin: 0; /* Elimina los márgenes predeterminados */
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 1em;
+    margin-right: 5em; /* Agrega un margen a la derecha para evitar que esté muy pegado al borde */
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 35em;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container-fix-login {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title-StayGo {
+    width: 35em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em ;
+    padding: 5%;
+    color: white;
+}
+
+
+.block-suggestion {
+    text-align: center;
+}
+
+.cursor {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: #2b7df0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.suggestion, .cursor {
+    display: inline-block;
+}
+
+.suggestion {
+    margin-right: 5px;
+}
+
+.cursor:hover {
+    text-decoration: underline;
+    color: #2b7df0;
+}
